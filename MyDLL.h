@@ -5,17 +5,22 @@
 #include<stdlib.h>
 #include <stdint.h>
 
-#define DATA_NODE_SIZE 100
+#define ELEMENTS 100
+#define ELEMENT_SIZE 128
+#define LIST_FULL -1
+#define ALL_NODE_FULL -2
+#define KEY_NOT_FOUND -3
 
 typedef struct Node{
 	uint16_t key;
-	unsigned char data [DATA_NODE_SIZE];
+	unsigned char data [ELEMENT_SIZE];
 	struct Node *next;
 	struct Node *prev;
+	bool notUsed;		
 } Node;
 
 typedef struct {
-	Node nodes[DATA_NODE_SIZE];
+	Node nodes[ELEMENTS];
 	Node *head;
 	Node *tail;
 	size_t max;
@@ -28,12 +33,12 @@ void MyDLLInit(DoublyLinkedList *dll, size_t max, size_t elem_size);
 
 void MyDLLRemove(DoublyLinkedList *dll, uint16_t key);
 
-void MyDLLInsert(DoublyLinkedList *dll, uint16_t key, unsigned char *data);
+int MyDLLInsert(DoublyLinkedList *dll, uint16_t key, unsigned char *data);
 
-const unsigned char* MyDLLFind(DoublyLinkedList* dll, uint16_t key);
+unsigned char* MyDLLFind(DoublyLinkedList* dll, uint16_t key);
 
-const unsigned char* MyDLLFindNext(DoublyLinkedList* dll, uint16_t key);
+unsigned char* MyDLLFindNext(DoublyLinkedList* dll, uint16_t key);
 
-const unsigned char* MyDLLFindPrev(DoublyLinkedList* dll, uint16_t key);
+unsigned char* MyDLLFindPrev(DoublyLinkedList* dll, uint16_t key);
 
 #endif
