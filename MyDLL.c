@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>	
 #include"MyDLL.h"
 
 void MyDLLInit(DoublyLinkedlist *dll, size_t max, size_t elememt_size){
@@ -21,7 +22,21 @@ void MyDLLInsert(void){
 void MyDLLRemove(void){
 }
 
-void MyDLLFind(void){
-}
+unsigned char* MyDLLFind(DoublyLinkedList *dll, uint16_t key) {
+    if(dll->current_size == 0){ 
+	printf("Error! Empty list \n");
+	return NULL;
+    }
+    // Começar do início da lista
+    Node *currentNode = dll->head; 	
+    while (currentNode != NULL && currentNode->key!= key) { 
+        currentNode = currentNode->next; 
+    }   
+    if(currentNode->key == key) { 
+        return currentNode->data; 
+    }   
+    printf("Error! Key not found\n");
+    return NULL;    
+} 
 
 void MyDLLFind{Next,Previous}

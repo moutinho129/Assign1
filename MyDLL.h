@@ -1,9 +1,10 @@
 #ifndef MY_DLL_H
 #define MY_DLL_H
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>	
 
 #define ELEMENTS 100
 #define ELEMENT_SIZE 128
@@ -24,14 +25,13 @@ typedef struct {
 	Node *head;
 	Node *tail;
 	size_t max;
-	size_t element_size;
 	size_t current_size;
 	
 } DoublyLinkedList;
 
 void MyDLLInit(DoublyLinkedList *dll, size_t max, size_t elem_size);
 
-void MyDLLRemove(DoublyLinkedList *dll, uint16_t key);
+int MyDLLRemove(DoublyLinkedList *dll, uint16_t key);
 
 int MyDLLInsert(DoublyLinkedList *dll, uint16_t key, unsigned char *data);
 
@@ -42,3 +42,4 @@ unsigned char* MyDLLFindNext(DoublyLinkedList* dll, uint16_t key);
 unsigned char* MyDLLFindPrev(DoublyLinkedList* dll, uint16_t key);
 
 #endif
+
