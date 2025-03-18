@@ -1,0 +1,62 @@
+\hypertarget{structNode}{}\doxysection{Node Struct Reference}
+\label{structNode}\index{Node@{Node}}
+
+
+Estrutura usada para representar um nó da DLL.  
+
+
+
+
+{\ttfamily \#include $<$My\+DLL.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+% FIG 0
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{structNode_a868764e64becfb820d70f261153984f5}{key}}
+\item 
+unsigned char \mbox{\hyperlink{structNode_ac2ee8845ec08217ea54ae76943c99f86}{data}} \mbox{[}ELEMENT\+\_\+\+SIZE\mbox{]}
+\item 
+struct \mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{structNode_af67b110ca1a258b793bf69d306929b22}{next}}
+\item 
+\mbox{\Hypertarget{structNode_aea9fefc3628c3ce98b967e8addf06e88}\label{structNode_aea9fefc3628c3ce98b967e8addf06e88}} 
+struct \mbox{\hyperlink{structNode}{Node}} $\ast$ {\bfseries prev}
+\item 
+\mbox{\Hypertarget{structNode_a3dbd323a860fde2b79096699270c1cb1}\label{structNode_a3dbd323a860fde2b79096699270c1cb1}} 
+bool {\bfseries not\+Used}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura usada para representar um nó da DLL. 
+
+Cada nó contem uma chave que o identifica(key), ponteiros para o nó seguinte(next), para o anterior (prev) e ainda um indicador booleano (not\+Used) que indica que o nó está livre. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structNode_ac2ee8845ec08217ea54ae76943c99f86}\label{structNode_ac2ee8845ec08217ea54ae76943c99f86}} 
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily unsigned char Node\+::data\mbox{[}ELEMENT\+\_\+\+SIZE\mbox{]}}
+
+dados armazenados no nó \mbox{\Hypertarget{structNode_a868764e64becfb820d70f261153984f5}\label{structNode_a868764e64becfb820d70f261153984f5}} 
+\index{Node@{Node}!key@{key}}
+\index{key@{key}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily uint16\+\_\+t Node\+::key}
+
+chave para identificação do nó \mbox{\Hypertarget{structNode_af67b110ca1a258b793bf69d306929b22}\label{structNode_af67b110ca1a258b793bf69d306929b22}} 
+\index{Node@{Node}!next@{next}}
+\index{next@{next}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structNode}{Node}}$\ast$ Node\+::next}
+
+ponteiro para o proximo nó ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MyDLL_8h}{My\+DLL.\+h}}\end{DoxyCompactItemize}

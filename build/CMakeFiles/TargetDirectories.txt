@@ -1,0 +1,6 @@
+/home/vboxuser/Desktop/SETR/Assign1/build/CMakeFiles/maindemo.dir
+/home/vboxuser/Desktop/SETR/Assign1/build/CMakeFiles/edit_cache.dir
+/home/vboxuser/Desktop/SETR/Assign1/build/CMakeFiles/rebuild_cache.dir
+/home/vboxuser/Desktop/SETR/Assign1/build/LibFolder/CMakeFiles/LibFolder.dir
+/home/vboxuser/Desktop/SETR/Assign1/build/LibFolder/CMakeFiles/edit_cache.dir
+/home/vboxuser/Desktop/SETR/Assign1/build/LibFolder/CMakeFiles/rebuild_cache.dir

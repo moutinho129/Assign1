@@ -1,4 +1,16 @@
-#include<stdio.h>
+/** 
+ *  @file MyDLL.c
+ *  @brief Funções usadas na Double Linked List
+ *
+ *  O ficheiro MyDLL.c contem a implementação das funções que foram declaradas no ficheiro MyDLL.h
+ * 
+ * @autor João Ferreira(98180), Nuno Moutinho(98626)
+ * @date 18/03/2025
+ * @bug Nenhum
+ * 
+ */
+
+ #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>	
 #include"MyDLL.h"
@@ -6,18 +18,25 @@
 
 //////////INICIO FUNÇAO INIT///////////////////////////////////////
 
-void MyDLLInit(DoublyLinkedlist *dll, size_t max, size_t elememt_size){
-	if(max == 0 || element_size == 0){
-		printf("ERROR(Invalid value)");
-		return
+void MyDLLInit(DoublyLinkedList *dll, size_t max, size_t element_size){
+	if(max == 0 || max > ELEMENTS || element_size == 0 || element_size > ELEMENT_SIZE){ //
+		printf("ERROR(Invalid value)");		
 	}
 	
 	dll -> max = max;
-	dll -> elememt_size = elememt_size;
 	dll -> head = NULL;
 	dll -> tail = NULL;
 	dll -> current_size = 0;
+	for (int i = 0; i < max; i++) {
+		dll->nodes[i].next = NULL;
+		dll->nodes[i].prev = NULL;
+		dll->nodes[i].notUsed = true;   // Marcar o nó como não utilizado
+		for (int j = 0; j < element_size; j++) { // Percorrer os dados
+			dll->nodes[i].data[j] = 0;  // Inicializar o campo data
+		} 
+   	 }
 }
+
 /////////////FIM FUNÇAO INIT///////////////////////////////////////
 
 
@@ -73,7 +92,35 @@ int MyDLLInsert(DoublyLinkedList *dll, uint16_t key, unsigned char *data) {
 
 //////////INICIO FUNÇAO REMOVE///////////////////////////////////////
 
-void MyDLLRemove(void){
+int MyDLLRemove(DoublyLinkedList *dll, uint16_t key){
+	Node *current = dll->head; //começar do inicio
+
+	while( current != NULL && current->key != key){ //procurar o elemento
+		current = current->next; //avançar para o proximo
+	}
+	
+	if( current == NULL){ //caso nao seja encontrado
+		printf("ERROR(Element not found)");
+		return KEY_NOT_FOUND;
+	}
+	
+	if(current -> prev == NULL){ // caso seja o primeiro
+		dll -> head = current -> next; //atualizar a cabeça
+	}else{
+		current -> prev -> next = current -> next;  //atualizar o anterior
+	}	
+	
+	
+	if(current -> next == NULL){ // caso seja o ultimo
+		dll -> tail = current -> prev;  //atualizar a cauda
+	}else{
+		current -> next -> prev = current-> prev; //atualizar o proximo
+	}
+	
+	current -> notUsed = true; //marcar como não utilizado	
+	
+	dll->current_size--; //decrementar o tamanho atual
+	return 0;	
 }
 /////////////FIM FUNÇAO REMOVE///////////////////////////////////////
 
@@ -89,7 +136,7 @@ unsigned char* MyDLLFind(DoublyLinkedList *dll, uint16_t key) {
     while (currentNode != NULL && currentNode->key!= key) { 
         currentNode = currentNode->next;  // Avançar para o próximo nó
     }   
-    if(currentNode->key == key) {     //Verificar se a key foi encontrada
+    if(currentNode != NULL && currentNode->key == key) {     //Verificar se a key foi encontrada
         return currentNode->data;   //Retornar os dados
     }   
     printf("Error! Key not found\n");
@@ -110,7 +157,7 @@ unsigned char* MyDLLFindNext(DoublyLinkedList* dll, uint16_t key){
 	while (currentNode != NULL && currentNode->key!= key) { // Percorrer a lista
         currentNode = currentNode->next; // Avançar para o próximo nó
 	}
-	if(currentNode->key == key) { // Verificar se a chave foi encontrada
+	if(currentNode != NULL && currentNode->key == key) { // Verificar se a chave foi encontrada
 		if(currentNode->next == NULL){ // Verificar se é o último nó
 			printf("Error! No next node\n");
 			return NULL;
@@ -135,7 +182,7 @@ unsigned char* MyDLLFindPrev(DoublyLinkedList* dll, uint16_t key){
 	while (currentNode != NULL && currentNode->key!= key) { // Percorrer a lista
         currentNode = currentNode->next; // Avançar para o próximo nó
 	}
-	if(currentNode->key == key) { // Verificar se a chave foi encontrada
+	if(currentNode != NULL && currentNode->key == key) { // Verificar se a chave foi encontrada
 		if(currentNode->prev == NULL){ // Verificar se é o último nó
 			printf("Error! No previous node\n");
 			return NULL;
@@ -146,6 +193,3 @@ unsigned char* MyDLLFindPrev(DoublyLinkedList* dll, uint16_t key){
 	return NULL;
 }
 /////////////FIM FUNÇAO FINDPREV///////////////////////////////////////
-
-
-
