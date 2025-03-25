@@ -1,5 +1,5 @@
 CMakeFiles/maindemo.dir/src/main.c.o: \
- /home/vboxuser/Desktop/SETR/Assign1/src/main.c \
+ /home/moutinho/Desktop/SETR/Assign1/src/main.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -55,4 +55,4 @@ CMakeFiles/maindemo.dir/src/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /home/vboxuser/Desktop/SETR/Assign1/src/MyDLL.h
+ /home/moutinho/Desktop/SETR/Assign1/src/MyDLL.h

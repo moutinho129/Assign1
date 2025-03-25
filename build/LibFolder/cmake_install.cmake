@@ -1,4 +1,4 @@
-# Install script for directory: /home/vboxuser/Desktop/SETR/Assign1/LibFolder
+# Install script for directory: /home/moutinho/Desktop/SETR/Assign1/LibFolder
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vboxuser/Desktop/SETR/Assign1/LibFolder/MyDLL.c" "LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o" "gcc" "LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o.d"
+  "/home/moutinho/Desktop/SETR/Assign1/LibFolder/MyDLL.c" "LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o" "gcc" "LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o.d"
   )
 
 # Targets to which this target links.

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vboxuser/Desktop/SETR/Assign1
+CMAKE_SOURCE_DIR = /home/moutinho/Desktop/SETR/Assign1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vboxuser/Desktop/SETR/Assign1/build
+CMAKE_BINARY_DIR = /home/moutinho/Desktop/SETR/Assign1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/Desktop/SETR/Assign1/build/CMakeFiles /home/vboxuser/Desktop/SETR/Assign1/build/LibFolder//CMakeFiles/progress.marks
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/Desktop/SETR/Assign1/build/CMakeFiles 0
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/moutinho/Desktop/SETR/Assign1/build/CMakeFiles /home/moutinho/Desktop/SETR/Assign1/build/LibFolder//CMakeFiles/progress.marks
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moutinho/Desktop/SETR/Assign1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/clean
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/preinstall
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/preinstall
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 LibFolder/CMakeFiles/LibFolder.dir/rule:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/CMakeFiles/LibFolder.dir/rule
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LibFolder/CMakeFiles/LibFolder.dir/rule
 .PHONY : LibFolder/CMakeFiles/LibFolder.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ LibFolder: LibFolder/CMakeFiles/LibFolder.dir/rule
 
 # fast build rule for target.
 LibFolder/fast:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/build
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/build
 .PHONY : LibFolder/fast
 
 MyDLL.o: MyDLL.c.o
@@ -135,7 +135,7 @@ MyDLL.o: MyDLL.c.o
 
 # target to build an object file
 MyDLL.c.o:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o
 .PHONY : MyDLL.c.o
 
 MyDLL.i: MyDLL.c.i
@@ -143,7 +143,7 @@ MyDLL.i: MyDLL.c.i
 
 # target to preprocess a source file
 MyDLL.c.i:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.i
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.i
 .PHONY : MyDLL.c.i
 
 MyDLL.s: MyDLL.c.s
@@ -151,7 +151,7 @@ MyDLL.s: MyDLL.c.s
 
 # target to generate assembly for a file
 MyDLL.c.s:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.s
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(MAKE) $(MAKESILENT) -f LibFolder/CMakeFiles/LibFolder.dir/build.make LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.s
 .PHONY : MyDLL.c.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/vboxuser/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/moutinho/Desktop/SETR/Assign1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

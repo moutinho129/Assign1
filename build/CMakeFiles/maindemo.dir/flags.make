@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/vboxuser/Desktop/SETR/Assign1/LibFolder
+C_INCLUDES = -I/home/moutinho/Desktop/SETR/Assign1/LibFolder
 
 C_FLAGS = 
 

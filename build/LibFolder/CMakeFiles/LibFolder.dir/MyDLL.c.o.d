@@ -1,5 +1,5 @@
 LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o: \
- /home/vboxuser/Desktop/SETR/Assign1/LibFolder/MyDLL.c \
+ /home/moutinho/Desktop/SETR/Assign1/LibFolder/MyDLL.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -49,7 +49,7 @@ LibFolder/CMakeFiles/LibFolder.dir/MyDLL.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h \
- /home/vboxuser/Desktop/SETR/Assign1/LibFolder/MyDLL.h \
+ /home/moutinho/Desktop/SETR/Assign1/LibFolder/MyDLL.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
